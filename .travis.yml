@@ -60,10 +60,10 @@ before_install:
 
 install:
   # Fetch monitor & stuff which is required for CWD migration tests.
-  - python stuff/monitor.py
+  - python misc/monitor.py
 
   # Bump the version of Cuckoo during tests (e.g., for new Signatures).
-  - python stuff/patch_version.py setup.py 3.0
+  - python misc/patch_version.py setup.py 3.0
 
   - pip install -U pip setuptools
   - python setup.py sdist

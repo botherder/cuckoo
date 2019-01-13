@@ -35,7 +35,7 @@ Cuckoo Package.
 
   .. code-block:: bash
 
-      (cuckoo-development)$ python stuff/monitor.py
+      (cuckoo-development)$ python misc/monitor.py
 
 * Install Cuckoo in ``development`` mode, in which files from the current
   directory (a ``git clone``'d Cuckoo repository on the ``package`` branch)

@@ -17,10 +17,10 @@ install:
   - "set PATH=%PYTHON%;%PYTHON%/Scripts;%PATH%"
 
   # Fetch monitor & stuff which is required for setup & CWD migration tests.
-  - "python.exe stuff/monitor.py"
+  - "python.exe misc/monitor.py"
 
   # Bump the version of Cuckoo during tests (e.g., for new Signatures).
-  - "python.exe stuff/patch_version.py setup.py 3.0"
+  - "python.exe misc/patch_version.py setup.py 3.0"
 
   - "python.exe setup.py sdist"
   - "pip.exe install -e ."

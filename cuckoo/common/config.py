@@ -308,7 +308,7 @@ class Config(object):
                 ),
                 "port_base": Int(50000),
                 "script": Path(
-                    "stuff/mitm.py",
+                    "misc/mitm.py",
                     exists=False, writable=False, readable=True
                 ),
                 "certificate": Path(

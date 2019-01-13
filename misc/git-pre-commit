@@ -1,6 +1,6 @@
 #!/bin/sh
 # Setup as follows (from the Git repository root):
-# $ ln -s $PWD/stuff/git-pre-commit $PWD/.git/hooks/pre-commit
+# $ ln -s $PWD/misc/git-pre-commit $PWD/.git/hooks/pre-commit
 set -e
 
 if git diff --cached cuckoo/web/src|grep -e '\+.*console.log'; then

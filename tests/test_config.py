@@ -1126,7 +1126,7 @@ script = mitm.py
     cfg = Config.from_confdir(cwd("conf"), loose=True)
     cfg = migrate(cfg, "2.0.4", "2.0.5")
 
-    assert cfg["auxiliary"]["mitm"]["script"] == "stuff/mitm.py"
+    assert cfg["auxiliary"]["mitm"]["script"] == "misc/mitm.py"
 
 def test_migration_205_206():
     set_cwd(tempfile.mkdtemp())

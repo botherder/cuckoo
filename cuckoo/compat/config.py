@@ -693,7 +693,7 @@ def _203_204(c):
 
 def _204_205(c):
     if c["auxiliary"]["mitm"]["script"] == "mitm.py":
-        c["auxiliary"]["mitm"]["script"] = "stuff/mitm.py"
+        c["auxiliary"]["mitm"]["script"] = "misc/mitm.py"
     return c
 
 def _205_206(c):

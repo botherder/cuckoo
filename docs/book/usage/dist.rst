@@ -485,7 +485,7 @@ following steps::
     $ /etc/init.d/nginx restart
 
 In order to test your entire Cuckoo cluster, i.e., every machine on every
-Cuckoo node, one may take the ``stuff/distributed/cluster-test.py`` script as
+Cuckoo node, one may take the ``misc/distributed/cluster-test.py`` script as
 an example. As-is it allows one to check for an active internet connection in
 each and every configured machine in the cluster. This script may be used to
 identify machines that are incorrect or have been corrupted in one way or
@@ -493,4 +493,4 @@ another. Example usage may look as follows::
 
     # Assuming Distributed Cuckoo listens on localhost and that you want to
     # run the 'internet' script (see also the source of cluster-test.py).
-    $ python stuff/distributed/cluster-test.py localhost -s internet
+    $ python misc/distributed/cluster-test.py localhost -s internet

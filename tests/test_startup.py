@@ -582,14 +582,14 @@ class TestYaraIntegration(object):
         """)
         init_yara()
 
-        # $CWD/stuff/index_memory.yar
-        assert os.path.exists(cwd("stuff", "index_memory.yar"))
-        buf = open(cwd("stuff", "index_memory.yar"), "rb").read()
+        # $CWD/misc/index_memory.yar
+        assert os.path.exists(cwd("misc", "index_memory.yar"))
+        buf = open(cwd("misc", "index_memory.yar"), "rb").read()
         assert 'include "%s"' % cwd("yara", "memory", "hello.yara") in buf
 
-        # $CWD/stuff/dumpmem.yarac
-        assert os.path.exists(cwd("stuff", "dumpmem.yarac"))
-        assert os.path.getsize(cwd("stuff", "dumpmem.yarac")) > 2048
+        # $CWD/misc/dumpmem.yarac
+        assert os.path.exists(cwd("misc", "dumpmem.yarac"))
+        assert os.path.getsize(cwd("misc", "dumpmem.yarac")) > 2048
 
     def test_missing_category(self):
         File.yara_rules = {}

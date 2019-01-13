@@ -252,7 +252,7 @@ def init_yara():
         # The memory.py processing module requires a yara file with all of its
         # rules embedded in it, so create this file to remain compatible.
         if category == "memory":
-            f = open(cwd("stuff", "index_memory.yar"), "wb")
+            f = open(cwd("misc", "index_memory.yar"), "wb")
             for filename in sorted(indexed):
                 f.write('include "%s"\n' % cwd("yara", "memory", filename))
 
@@ -264,8 +264,8 @@ def init_yara():
                 log.debug("\t |-- %s %s", category, entry)
 
     # Store the compiled Yara rules for the "dumpmem" category in
-    # $CWD/stuff/ so that we may pass it along to zer0m0n during analysis.
-    File.yara_rules["dumpmem"].save(cwd("stuff", "dumpmem.yarac"))
+    # $CWD/misc/ so that we may pass it along to zer0m0n during analysis.
+    File.yara_rules["dumpmem"].save(cwd("misc", "dumpmem.yarac"))
 
 def init_binaries():
     """Inform the user about the need to periodically look for new analyzer
